@@ -14,7 +14,12 @@ app.get('/',(req,res)=>{
     res.render('index.ejs')
 })
 
+app.get('/page1',(req,res)=>{
+    res.render('page1.ejs')
+})
+
 app.post('/show',(req,res)=>{
     console.log(req.body)
+    res.redirect('/page1')
 })
 
